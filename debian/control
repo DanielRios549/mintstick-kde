@@ -1,12 +1,12 @@
-Source: mintstick
+Source: mintstick-kde
 Section: misc
 Priority: optional
-Maintainer: Clement Lefebvre <root@linuxmint.com>
+Maintainer: Daniel Rios <danielrios.oficial@gmail.com>
 Build-Depends: debhelper (>= 9), python
 Build-Depends-Indep: gettext
 Standards-Version: 3.9.5
 
-Package: mintstick
+Package: mintstick-kde
 Architecture: all
 Depends:
  ${misc:Depends},
@@ -23,7 +23,7 @@ Depends:
  gir1.2-xapp-1.0,
  util-linux,
  exfat-utils
-Conflicts: usb-imagewriter
-Replaces: usb-imagewriter
+Conflicts: usb-imagewriter, mintstick
+Replaces: usb-imagewriter, mintstick
 Description: write .img and .iso files to USB sticks
  A GUI to write .img or .iso files to a USB Key. It can also format them.

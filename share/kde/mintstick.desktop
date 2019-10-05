@@ -1,0 +1,14 @@
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=application/x-cd-image;
+Actions=Write
+Icon=media-removable-symbolic
+
+[Desktop Action Write]
+Exec=mintstick -m iso -i "%F"
+Icon=media-removable-symbolic
+Name=Make bootable USB stick
+Name[pt_BR]=Criar dispositivo USB inicializável
+Comment=Make a bootable USB stick
+Comment[pt_BR]=Crie um dispositivo USB inicializável]

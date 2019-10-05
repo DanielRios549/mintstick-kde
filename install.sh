@@ -17,26 +17,24 @@
 #  Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
 
 LIBFILES="mintstick.py raw_write.py raw_format.py mountutils.py"
-DATAFILES="mintstick.glade mintstick.ui"
+DATAFILES="mintstick.ui"
 
 
 if [ "$1" = "uninstall" ]; then
     rm -rf /usr/lib/mintstick
     rm -rf /usr/share/mintstick
-    rm -r /usr/share/applications/mintstick.desktop
     rm -r /usr/share/applications/mintstick-kde.desktop
-    rm -r /usr/share/applications/mintstick-format.desktop
-    rm -r /usr/share/applications/mintstick-kde-format.desktop
+    rm -r /usr/share/applications/mintstick-format-kde.desktop
     rm -f /usr/bin/mintstick
-    rm -rf /usr/share/polkit-1/actions/org.linuxmint.im.policy
-    rm -rf /usr/share/kde4/apps/solid/actions/mintstick-format.desktop
+    rm -rf /usr/share/polkit-1/actions/com.linuxmint.mintstick.policy
+    rm -rf /usr/share/solid/actions/mintstick-format.desktop
+    rm -rf /usr/share/kservices5/ServiceMenus/mintstick.desktop
 else
-    cp share/applications/mintstick.desktop /usr/share/applications/
-    cp share/applications/mintstick-format.desktop /usr/share/applications/
     cp share/applications/mintstick-kde.desktop /usr/share/applications/
     cp share/applications/mintstick-format-kde.desktop /usr/share/applications/
-    cp share/polkit/org.linuxmint.im.policy /usr/share/polkit-1/actions
-    cp share/kde4/mintstick-format_action.desktop /usr/share/kde4/apps/solid/actions
+    cp share/polkit/com.linuxmint.mintstick.policy /usr/share/polkit-1/actions
+    cp share/kde/mintstick.desktop /usr/share/kservices5/ServiceMenus
+    cp share/kde/mintstick-format.desktop /usr/share/solid/actions
     cp mintstick /usr/bin/
     mkdir -p /usr/lib/mintstick
     mkdir -p /usr/share/mintstick

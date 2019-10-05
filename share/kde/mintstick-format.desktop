@@ -1,9 +1,11 @@
 [Desktop Entry]
-X-KDE-Solid-Predicate=[ StorageDrive.removable == 'true' AND StorageDrive.bus == 'Usb' ]
+X-KDE-Solid-Predicate=[IS StorageVolume AND StorageVolume.ignored == false]
 Type=Service
 Actions=open;
+Icon=edit-clear-all-symbolic
 
 [Desktop Action open]
 Exec=/usr/lib/mintstick/mintstick.py -m format -u %d
 Icon=drive-removable-media-usb-pendrive
 Name=Format USB stick
+Icon=edit-clear-all-symbolic
